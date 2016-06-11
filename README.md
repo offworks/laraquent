@@ -2,6 +2,11 @@
 An out of Laravel Eloquent 5.1 extended use, and as a provider to different microframeworks.
 
 ### Usage
+Install through composer
+```
+composer require offworks/laraquent
+```
+
 Prepare the eloquent capsule using it's very own documentation
 https://github.com/illuminate/database
 
