@@ -5,7 +5,7 @@ An out of laravel eloquent 5.1 use, for a quick access to different microframewo
 Prepare the eloquent capsule using it's very own documentation
 https://github.com/illuminate/database
 
-#### Active schema migration
+### Active schema migration
 table() method may now be used to listen to existing database, to perform either create or alter table, it will make changes to database accordingly.
 - create table if the table doesn't exist.
 - add column for existing table and skip exception if table doesn't exist
