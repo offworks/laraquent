@@ -5,14 +5,10 @@ An out of laravel eloquent 5.1 use, for a quick access to different microframewo
 Prepare the eloquent capsule using it's very own documentation
 https://github.com/illuminate/database
 
-### Extends schema Builder and Blueprint
-- addColumn() now check for existing columns in db
-- Schema\Builder::table now create if table does not exist
-
 #### Active schema migration
 table() method may now be used to listen to existing database, to perform either create or alter table, it will make changes to database accordingly.
 - create table if the table doesn't exist.
-- add column for existing table
+- add column for existing table and skip exception if table doesn't exist
 - does not drop table
 - does not drop column
 ```
