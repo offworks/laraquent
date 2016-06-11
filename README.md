@@ -1,5 +1,5 @@
 # laraquent
-An out of laravel eloquent 5.1 use, for a quick access to different microframeworks, and several extended uses.
+An out of Laravel Eloquent 5.1 extended use, and as a provider to different microframeworks.
 
 ### Usage
 Prepare the eloquent capsule using it's very own documentation

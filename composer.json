@@ -1,4 +1,16 @@
 {
+	"name": "offworks/laraquent",
+	"description": "An out of Laravel Eloquent 5.1 extended use, and as a provider to different microframeworks.",
+	"license": "MIT",
+	"keywords": ["laravel", "eloquent", "mysql", "php-mysql", "orm", "exedra"],
+	"authors": [{
+		"name": "Ahmad Rahimie Ahmad Zailani",
+		"email": "newrehmi@gmail.com",
+		"role": "lead"
+		}],
+	"support": {
+		"issues": "https://github.com/offworks/overnight/issues"
+	},
 	"require": {
 		"illuminate/database": "5.1.*"
 	},
