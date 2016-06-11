@@ -27,4 +27,13 @@ $schema->table('Book', function($table) {
 ```
 
 ### Prefixed relation method
-- Relation method now is to be prefixed with 'relate'
+Relation method now is to be prefixed with 'relate'. Example :
+```
+class Article extends \Laraquent\Base
+{
+    public function relateAuthor()
+    {
+        return $this->hasOne('\App\Entity\Author', 'author_id');
+    }
+}
+```
