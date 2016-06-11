@@ -9,8 +9,12 @@ https://github.com/illuminate/database
 - addColumn() now check for existing columns in db
 - Schema\Builder::table now create if table does not exist
 
-#### Active schema
-Every executed table() method will be listened as either create or alter, it will make the changes to database accordingly. It does not drop columns.
+#### Active schema migration
+table() method may now be used to listen to existing database, to perform either create or alter table, it will make changes to database accordingly.
+- create table if the table doesn't exist.
+- add column for existing table
+- does not drop table
+- does not drop column
 ```
 $connection = $capsule->getConnection();
 
@@ -39,8 +43,9 @@ class Article extends \Laraquent\Base
 ```
 
 ### As a service provider
+Provide as a service to different microframeworks
 #### \Exedra
-- Basically it'll just instatiate the eloquent capsule, and set a service with name 'eloquent'.
+Basically the provider will instatiate the eloquent capsule, and register a service with name 'eloquent'.
 ```
 $app->config->set('db', array(
     'host' => 'localhost',
@@ -51,13 +56,25 @@ $app->config->set('db', array(
 
 $app->provider->add(\Laraquent\Support\Provider\Exedra::class);
 ```
-##### Active schema migrate
+##### Active schema migration
 - Add a model:migrate console command, and will look for {root}/database/schema.php
   - or configure db.schema_path (relative to root)
 ```
 $app->config->set('db.schema_path', 'database/schema.php');
 ```
+database/schema.php file will be loaded, with an extracted $schema variable.
+```
+$schema->table('Author', function() {
+    $table->increments('id');
+    $table->string('name');
+    $table->timestamps();
+});
+```
+
 Command use (assuming console access name is 'wizard') :
 ```
 php wizard model:migrate
 ```
+
+### Special thanks
+Special thanks to Taylor Otwell, and Laravel communities for making an awesome framework, and for making it possible to use eloquent outside of larevel. 
