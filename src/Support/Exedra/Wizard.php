@@ -14,7 +14,7 @@ class Wizard extends \Exedra\Wizard\Wizardry
 	{
 		$this->app->eloquent->getConnection()->useDefaultSchemaGrammar();
 
-		$file = $this->app->path->file($this->app->config->get('db.schema_path', 'schema/schema.php'));
+		$file = $this->app->path->file($this->app->config->get('db.schema_path', 'database/schema.php'));
 
 		if(!$file->isExists())
 			throw new \Exception('['.$file.'] does not exists.');
