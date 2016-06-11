@@ -37,3 +37,27 @@ class Article extends \Laraquent\Base
     }
 }
 ```
+
+### As a service provider
+#### \Exedra
+- Basically it'll just instatiate the eloquent capsule, and set a service with name 'eloquent'.
+```
+$app->config->set('db', array(
+    'host' => 'localhost',
+    'name' => 'my_db',
+    'user' => 'root',
+    'password' => 'password'
+));
+
+$app->provider->add(\Laraquent\Support\Provider\Exedra::class);
+```
+##### Active schema migrate
+- Add a model:migrate console command, and will look for {root}/database/schema.php
+  - or configure db.schema_path (relative to root)
+```
+$app->config->set('db.schema_path', 'database/schema.php');
+```
+Command use (assuming console access name is 'wizard') :
+```
+php wizard model:migrate
+```
