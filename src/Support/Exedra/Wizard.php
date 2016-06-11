@@ -20,7 +20,7 @@ class Wizard extends \Exedra\Wizard\Wizardry
 			throw new \Exception('['.$file.'] does not exists.');
 
 		$file->load(array(
-			'schema' => new \Nova\Laraquent\Schema($this->app->eloquent->getConnection())
+			'schema' => new \Laraquent\Schema($this->app->eloquent->getConnection())
 			));
 	}
 }
