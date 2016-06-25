@@ -55,7 +55,7 @@ $app->config->set('db', array(
     'password' => 'password'
 ));
 
-$app->provider->add(\Laraquent\Support\Provider\Exedra::class);
+$app->provider->add(\Laraquent\Support\Exedra\Provider::class);
 ```
 ##### Active schema migration
 - Add a model:migrate console command, and will look for {root}/database/schema.php
