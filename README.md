@@ -1,10 +1,11 @@
 # laraquent
 A quick out of Laravel Eloquent 5.5 setup. 
+
 I am just too lazy to figure out everything again everything I need to use eloquent. :p
 
 More documentation can be found here :
-https://github.com/illuminate/database
-https://laravel.com/docs/master/eloquent
+- https://github.com/illuminate/database
+- https://laravel.com/docs/master/eloquent
 
 ### Usage
 Install through composer
