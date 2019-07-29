@@ -19,7 +19,7 @@ $capsule = \Laraquent\Factory::boot([
     'host' => 'localhost',
     'name' => 'mydb',
     'user' => 'root',
-    'pass' = > ''
+    'pass' => ''
     ]);
 ```
 
